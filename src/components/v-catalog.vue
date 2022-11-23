@@ -1,7 +1,9 @@
 <template>
     <div class="v-catalog">
         <h1>Catalog</h1>
-        <VCatalogItem />
+        <div class="v-catalog__list">
+            <v-catalog-item />
+        </div>
     </div>
 </template>
 
@@ -25,6 +27,13 @@ import vCatalogItem from './v-catalog-item.vue';
     }
 </script>
 
-<style>
-
+<style lang="scss">
+    .v-catalog {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 </style>
